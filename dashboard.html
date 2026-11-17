@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PawCare | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <nav>
+        <h2>PawCare 🐾</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="dashboard.html">Dashboard</a>
+
+            <button id="logoutButton">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <h1 id="welcome">Welcome</h1>
+
+        <section class="form-container wide">
+
+            <h2>Book an Appointment</h2>
+
+            <form id="appointmentForm"
+                  action="php/create.php"
+                  method="POST">
+
+                <label for="pet_name">Pet Name</label>
+
+                <input type="text"
+                       id="pet_name"
+                       name="pet_name"
+                       maxlength="100"
+                       required>
+
+                <label for="service">Select Service</label>
+
+                <select id="service" name="service" required>
+
+                    <option value="">Choose Service</option>
+                    <option>Veterinary Checkup</option>
+                    <option>Pet Grooming</option>
+                    <option>Vaccination</option>
+                    <option>Pet Boarding</option>
+
+                </select>
+
+                <label for="date">Appointment Date</label>
+
+                <input type="date"
+                       id="date"
+                       name="date"
+                       required>
+
+                <p id="message" class="message"></p>
+
+                <button type="submit">
+                    Book Appointment
+                </button>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <h2>My Appointments</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Pet Name</th>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="appointmentRows">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="tableMessage"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2026 PawCare
+    </footer>
+
+</body>
+
+</html>

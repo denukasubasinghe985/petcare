@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PawCare | Edit Appointment</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <nav>
+        <h2>PawCare 🐾</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="form-container">
+
+        <h1>Edit Appointment</h1>
+
+        <form id="editForm"
+              action="php/update.php"
+              method="POST">
+
+            <input type="hidden" id="id" name="id">
+
+            <label for="pet_name">Pet Name</label>
+
+            <input type="text"
+                   id="pet_name"
+                   name="pet_name"
+                   maxlength="100"
+                   required>
+
+            <label for="service">Service</label>
+
+            <select id="service" name="service" required>
+
+                <option>Veterinary Checkup</option>
+                <option>Pet Grooming</option>
+                <option>Vaccination</option>
+                <option>Pet Boarding</option>
+
+            </select>
+
+            <label for="date">Appointment Date</label>
+
+            <input type="date"
+                   id="date"
+                   name="date"
+                   required>
+
+            <p id="message" class="message"></p>
+
+            <button type="submit">Save Changes</button>
+
+            <a href="dashboard.html">Cancel</a>
+
+        </form>
+
+    </main>
+
+    <footer>
+        &copy; 2026 PawCare
+    </footer>
+
+</body>
+
+</html>

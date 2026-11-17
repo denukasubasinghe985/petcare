@@ -1,0 +1,301 @@
+/* General styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F6FF;
+    color: #10375C;
+    line-height: 1.6;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+/* Navigation bar */
+
+nav {
+    background-color: #10375C;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 20px 6%;
+    gap: 15px;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #EB8317;
+}
+
+
+/* Homepage */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 30px;
+    padding: 80px 8%;
+
+    background-color: #DFE9F5;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.2;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+
+/* Main content */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* Service cards */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Forms */
+
+.form-container {
+    background-color: white;
+
+    width: 90%;
+    max-width: 450px;
+
+    margin: 40px auto;
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.wide {
+    max-width: 700px;
+    margin: 25px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #CCCCCC;
+    border-radius: 7px;
+
+    font-size: 15px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #EB8317;
+}
+
+
+/* Buttons */
+
+button,
+.button {
+    display: inline-block;
+
+    background-color: #10375C;
+    color: white;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    text-decoration: none;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+button:hover,
+.button:hover {
+    background-color: #28577F;
+}
+
+.hero .button {
+    background-color: #AD5008;
+}
+
+form button {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.delete-button {
+    background-color: #B52D32;
+    margin-left: 10px;
+}
+
+nav button {
+    background-color: #AD5008;
+}
+
+
+/* Appointment table */
+
+.table-container {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+th {
+    background-color: #10375C;
+    color: white;
+}
+
+td a {
+    color: #10375C;
+    font-weight: bold;
+}
+
+
+/* Messages */
+
+.message {
+    color: #B52D32;
+    font-size: 14px;
+}
+
+.success {
+    color: #208044;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #10375C;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+
+    margin-top: auto;
+}
+
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 35px 6%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .form-container {
+        padding: 22px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
